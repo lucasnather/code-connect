@@ -1,0 +1,11 @@
+
+services:
+  postgres:
+    image: 'bitnami/postgresql'
+    container_name: code-connect
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRESQL_USERNAME=${POSTGRES_USERNAME}
+      - POSTGRESQL_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRESQL_DATABASE=${POSTGRES_DATABASE}

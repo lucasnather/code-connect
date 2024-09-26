@@ -2,21 +2,34 @@
   "name": "code-connect",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seed": "prisma db seed"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.13"
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1",
+    "winston": "^3.14.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@prisma/client": "^5.20.0",
     "@types/node": "^20",
     "@types/react": "^18",
-    "@types/react-dom": "^18"
+    "@types/react-dom": "^18",
+    "prisma": "^5.20.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5"
   }
 }
